@@ -10,7 +10,7 @@ import kp from './keypair.json'
 
 
 
-const { SystemProgram, Keypair } = web3;
+const { SystemProgram } = web3;
 const arr = Object.values(kp._keypair.secretKey)
 const secret = new Uint8Array(arr)
 const baseAccount = web3.Keypair.fromSecretKey(secret)
@@ -26,12 +26,12 @@ const opts = {
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
-const TEST_GIFS = [
-  'https://media.giphy.com/media/1oKjCzdnatyyMxkdxF/giphy.gif',
-  'https://media.giphy.com/media/l2JI4zgwXw5IfyssE/giphy.gif',
-  'https://media.giphy.com/media/DrJm6F9poo4aA/giphy.gif',
-  'https://media.giphy.com/media/ceeFbVxiZzMBi/giphy.gif'
-]
+// const TEST_GIFS = [
+//   'https://media.giphy.com/media/1oKjCzdnatyyMxkdxF/giphy.gif',
+//   'https://media.giphy.com/media/l2JI4zgwXw5IfyssE/giphy.gif',
+//   'https://media.giphy.com/media/DrJm6F9poo4aA/giphy.gif',
+//   'https://media.giphy.com/media/ceeFbVxiZzMBi/giphy.gif'
+// ]
 
 const App = () => {
   const [walletAddress, setWalletAddress] = React.useState(null);
